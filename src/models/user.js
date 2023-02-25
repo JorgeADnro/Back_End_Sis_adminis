@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const empleadoSchema = mongoose.Schema({
+const pacienteSchema = mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -9,7 +9,7 @@ const empleadoSchema = mongoose.Schema({
         type: Number,
         required: true
     },
-    rol: {
+    ocupation: {
         type: String,
         required: true
     },
@@ -24,7 +24,47 @@ const empleadoSchema = mongoose.Schema({
     phoneNumber:{
         type: Number,
         required: true
+    },
+    chronologicalDisease:{
+        type: String,
+        required: true
+    },
+    pathologicalDisease:{
+        type: String,
+        required: true
+    },
+    SLAO:{
+        type: Number,
+        required: true
+    },
+    SLOI:{
+        type: Number,
+        required: true
+    },
+    SLOD:{
+        type: Number,
+        required: true
+    },
+    CLAO:{
+        type: Number,
+        required: true
+    },
+    CLOI:{
+        type: Number,
+        required: true
+    },
+    CLOD:{
+        type: Number,
+        required: true
+    },
+    Comments:{
+        type: String,
+        required: true
+    },
+    mostrarComentario:{
+        type: String,
+        require: false
     }
 });
 
-module.exports = mongoose.model('User', empleadoSchema);
+module.exports = mongoose.model('User', pacienteSchema);
